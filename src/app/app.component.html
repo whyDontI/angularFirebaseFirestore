@@ -1,2 +1,10 @@
 <h1>Angualr Firebase Firestore Boilerplate</h1>
+    <h3>Items list from DB</h3>
+    <ul>
+        <li class="text" *ngFor="let item of items | async">
+            {{item.productName}} <br>
+            {{item.price}} <br>
+            {{item.weight}}
+        </li>
+    </ul>
 <router-outlet></router-outlet>

@@ -11,9 +11,14 @@ import { AppComponent } from './app.component';
 
 import { environment } from 'src/environments/environment';
 
+import { AuthService } from 'src/app/Services/auth.service';
+import { DataService } from 'src/app/Services/data.service';
+
+import { UserComponent } from './user/user.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,7 @@ import { environment } from 'src/environments/environment';
     AngularFireStorageModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AuthService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
